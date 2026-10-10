@@ -6,7 +6,7 @@ This project focuses on analyzing sales and revenue performance for a retail sto
 ---
 
 ## 📸 Dashboard Preview
-![Dashboard Preview](sales performance.png)
+![Dashboard Preview](sales_performance.png)
 
 ---
 
