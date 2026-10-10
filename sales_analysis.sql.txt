@@ -1,0 +1,38 @@
+SELECT 
+    Region,
+    SUM(Sales) AS Total_Sales,
+    COUNT(DISTINCT "Order ID") AS Total_Orders
+FROM Superstore_Sales
+GROUP BY Region
+ORDER BY Total_Sales DESC;
+
+Result :
+منطقة West: هي الأعلى مبيعاً بحوالي 710,219 دولار وإجمالي 1,587 طلب.   منطقة 
+East: تأتي في المرتبة الثانية.   منطقة 
+Central: المرتبة الثالثة.   منطقة 
+South: هي الأقل مبيعاً.
+
+-------------------------------------
+
+SELECT 
+    "Product Name",
+    Category,
+    SUM(Sales) AS Total_Sales
+FROM Superstore_Sales
+GROUP BY "Product Name", Category
+ORDER BY Total_Sales DESC
+LIMIT 10;
+
+معرفة أفضل المنتجات مبيعاً وأكثرها تحقيقاً للمبيعات (Top 10 Products)
+
+-------------------------------------
+
+SELECT 
+    Category,
+    SUM(Sales) AS Total_Sales,
+    COUNT(DISTINCT "Order ID") AS Total_Orders
+FROM Superstore_Sales
+GROUP BY Category
+ORDER BY Total_Sales DESC;
+
+استخراج المبيعات حسب الفئة (Category)
